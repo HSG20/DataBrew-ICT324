@@ -1,0 +1,50 @@
+AUDIT {"raw_rows": 234005, "raw_tickets": 136451, "raw_products": 149, "raw_multi_product_tickets": 58583, "missing_cells": 0, "exact_duplicate_rows": 0, "same_values_excluding_row_id": 1210, "negative_quantity_rows": 1295, "zero_price_rows": 32, "first_date": "2021-01-02", "last_date": "2022-09-30", "ticket_date_conflicts": 0, "ticket_time_conflicts": 0, "excluded_return_tickets": 778, "excluded_return_ticket_rows": 1319, "excluded_nonpositive_price_quantity_rows": 31, "clean_rows": 232655, "clean_tickets": 135672, "clean_products": 147, "clean_multi_product_tickets": 58235, "clean_avg_distinct_items": 1.7012869272952416, "clean_avg_units": 2.6690768913261396, "clean_avg_spend": 4.146173123415297}
+K {'k': 2, 'wcss': 243567.66879261337, 'silhouette': 0.3988697301995332}
+K {'k': 3, 'wcss': 162419.20038525, 'silhouette': 0.45254886613155104}
+K {'k': 4, 'wcss': 133232.8985557048, 'silhouette': 0.4051366032753143}
+K {'k': 5, 'wcss': 109614.3854535532, 'silhouette': 0.4096853756664548}
+K {'k': 6, 'wcss': 92554.85373200107, 'silhouette': 0.4221368459874928}
+K {'k': 7, 'wcss': 81916.23263074271, 'silhouette': 0.3825732451850233}
+K {'k': 8, 'wcss': 73451.92138350842, 'silhouette': 0.36074768828223897}
+SELECTED 3 
+          tickets  mean_hour  median_hour  min_hour  max_hour  mean_distinct_products  mean_units  mean_spend_eur  multi_product_share     share
+cluster                                                                                                                                        
+0          41089  10.176300         10.0         7        19                2.806834    4.765631        8.183118             0.965197  0.302855
+1          76580  10.391708         11.0         7        14                1.158266    1.676208        2.247397             0.158253  0.564450
+2          18003  17.157863         17.0        14        20                1.487919    2.107427        3.009376             0.358662  0.132695
+ARM {'group': 'Global', 'tickets': 135672, 'min_count': 1357, 'frequent_itemsets': 49, 'rules': 13, 'avg_support': np.float64(0.021339361446384267), 'avg_confidence': np.float64(0.6131909882449482), 'avg_lift': np.float64(5.268844297596018), 'apriori_seconds': 0.060819700999900306, 'fpgrowth_seconds': 0.1267516230000183, 'identical_itemsets': True}
+ group       antecedent       consequent  support  confidence     lift  cooccurrences  antecedent_count  consequent_count  antecedent_size  consequent_size
+Global       BOULE 200G            COUPE 0.017513    0.888889 6.234353           2376              2673             19344                1                1
+Global        CROISSANT PAIN AU CHOCOLAT 0.039566    0.471415 6.104007           5368             11387             10478                1                1
+Global PAIN AU CHOCOLAT        CROISSANT 0.039566    0.512312 6.104007           5368             10478             11387                1                1
+Global         CAMPAGNE            COUPE 0.022886    0.799845 5.609834           3105              3882             19344                1                1
+Global       BOULE 400G            COUPE 0.023771    0.794531 5.572558           3225              4059             19344                1                1
+Global          COMPLET            COUPE 0.016997    0.738629 5.180484           2306              3122             19344                1                1
+ARM {'group': 'Cluster 0', 'tickets': 41089, 'min_count': 411, 'frequent_itemsets': 104, 'rules': 54, 'avg_support': np.float64(0.026646313377555318), 'avg_confidence': np.float64(0.5536416788428995), 'avg_lift': np.float64(2.317699465967392), 'apriori_seconds': 0.032551116999911756, 'fpgrowth_seconds': 0.0589310000000296, 'identical_itemsets': True}
+    group antecedent       consequent  support  confidence     lift  cooccurrences  antecedent_count  consequent_count  antecedent_size  consequent_size
+Cluster 0 BOULE 200G            COUPE 0.034632    0.952477 3.223483           1423              1494             12141                1                1
+Cluster 0 BOULE 400G            COUPE 0.049697    0.890536 3.013858           2042              2293             12141                1                1
+Cluster 0   CAMPAGNE            COUPE 0.043491    0.871707 2.950134           1787              2050             12141                1                1
+Cluster 0     SEIGLE            COUPE 0.017693    0.852286 2.884407            727               853             12141                1                1
+Cluster 0    COMPLET            COUPE 0.038818    0.799499 2.705758           1595              1995             12141                1                1
+Cluster 0  CROISSANT PAIN AU CHOCOLAT 0.122685    0.543094 2.705528           5041              9282              8248                1                1
+ARM {'group': 'Cluster 1', 'tickets': 76580, 'min_count': 766, 'frequent_itemsets': 20, 'rules': 3, 'avg_support': np.float64(0.01204404979542091), 'avg_confidence': np.float64(0.480779515459898), 'avg_lift': np.float64(9.882290524291058), 'apriori_seconds': 0.013597154000080991, 'fpgrowth_seconds': 0.05326984299995274, 'identical_itemsets': True}
+    group    antecedent    consequent  support  confidence      lift  cooccurrences  antecedent_count  consequent_count  antecedent_size  consequent_size
+Cluster 1      CAMPAGNE         COUPE 0.011060    0.681416 11.302324            847              1243              4617                1                1
+Cluster 1 SPECIAL BREAD         COUPE 0.012536    0.552995  9.172274            960              1736              4617                1                1
+Cluster 1         COUPE SPECIAL BREAD 0.012536    0.207927  9.172274            960              4617              1736                1                1
+ARM {'group': 'Cluster 2', 'tickets': 18003, 'min_count': 181, 'frequent_itemsets': 38, 'rules': 7, 'avg_support': np.float64(0.018965093119400735), 'avg_confidence': np.float64(0.7354125809551724), 'avg_lift': np.float64(5.11973422077957), 'apriori_seconds': 0.005170106999912605, 'fpgrowth_seconds': 0.015242960000023231, 'identical_itemsets': True}
+    group antecedent consequent  support  confidence     lift  cooccurrences  antecedent_count  consequent_count  antecedent_size  consequent_size
+Cluster 2 BOULE 200G      COUPE 0.017442    0.857923 5.972621            314               366              2586                1                1
+Cluster 2 BOULE 400G      COUPE 0.024551    0.826168 5.751549            442               535              2586                1                1
+Cluster 2   CAMPAGNE      COUPE 0.026162    0.799660 5.567010            471               589              2586                1                1
+Cluster 2  VIK BREAD      COUPE 0.012609    0.739414 5.147589            227               307              2586                1                1
+Cluster 2    MOISSON      COUPE 0.018941    0.713389 4.966413            341               478              2586                1                1
+Cluster 2    COMPLET      COUPE 0.015164    0.691139 4.811516            273               395              2586                1                1
+MATCHED descriptive:
+            rules  avg_global_confidence  avg_cluster_confidence  avg_conf_change  avg_lift_change
+group                                                                                            
+Cluster 0     54               0.477137                0.553642         0.076505        -2.343377
+Cluster 1      3               0.515316                0.480780        -0.034536         5.257357
+Cluster 2      7               0.751122                0.735413        -0.015710        -0.148373
+DONE
